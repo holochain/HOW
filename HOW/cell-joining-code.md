@@ -1,16 +1,24 @@
-# HIP: Cell Joining Code
-- Author: @mattyg <matt@buildyourweb.app>, Claude AI 3.5 Sonnet
-- Type: Application
-- Status: Draft
-- Created: 2024-11-23
+---
+HOW: /tech/cell-joining-code
+Created: 2024-11-23
+Status: Draft
+---
 
-# Abstract
+## Title
 
-This HIP proposes a standardized URI format for cell joining codes that enables conductors to join specific networks. The format encapsulates all necessary information for network joining in a single, shareable URI string, excluding the actual DNA.
+Cell Joining Code
 
-# Motivation
+## Author
 
-Currently, joining a Cell network requires multiple pieces of information to be shared separately: DNA hash, network seed, membrane proof, and app-specific metadata. Several apps have run into this need and implemented their own joining code format. A standardized joining code format would:
+@mattyg <matt@buildyourweb.app>, Claude AI 3.5 Sonnet
+
+## Abstract
+
+This HOW proposes a standardized URI format for cell joining codes that enables conductors to join specific networks. The format encapsulates all necessary information for network joining in a single, shareable URI string, excluding the actual DNA.  The format also allows app-specific data to be carried so that UIs can display arbitrary data as needed for good 
+
+## Motivation
+
+Joining a Cell network requires multiple pieces of information to be shared: DNA hash, network seed, membrane proof, and app-specific metadata. Several apps have run into the need to share this information as a single blob and implemented their own joining code format. A standardized joining code format would:
 - Simplify the network joining process
 - Simplify use of network joining codes in apps
 - Reduce user error during configuration
@@ -18,7 +26,14 @@ Currently, joining a Cell network requires multiple pieces of information to be 
 - Facilitate easier sharing of network access
 - Facilitate services providing "always-on" Cells: simply provide the DNA and joining code
 
-# Specification
+## Rationale
+
+This specification meets the criteria of the motivation because:
+- it uses the standard URI format which makes it amenable to deep-linking
+- it uses a specific path in the URI format leaving other paths available under the `hc://` scheme for other uses.
+- it includes a well-known pattern for specifying attributes and thus arbitrary application-specific components, as well as optional data elements.
+
+## Technical Specification
 
 The cell joining URI format MUST follow this structure:
 
@@ -42,7 +57,7 @@ The URI format MUST NOT include additional path segments or query parameters bey
 All components MUST maintain the exact order shown in the format specification.
 
 
-## Example Implementation
+## Reference Implementation
 
 ```rust
 use holochain_integrity_types::info::DnaModifiers;

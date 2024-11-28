@@ -1,58 +1,89 @@
-# Holochain Improvement Proposals (HIPs)
+# Holochain Organization Work
 
-## What is a HIP?
+This repo contains and embodies the standards process for the documentation and evolution of the Holochain Framework and Ecosystem.
 
-A Holochain Improvement Proposal (HIP) is a design document providing information to the Holochain community, or describing a new feature for Holochain, its processes, or environment. The HIP should provide a concise technical specification of the feature and a rationale for the feature.
+## What is a HOW
 
-## HIP Types
+A Holochain Organizational Work standard (HOW) is a design document providing for a technical or social/process standard or information to the Holochain community.  A HOW may describe a new feature for Holochain, its processes, or environment, it may describe a standard used by Holochain applications in the Ecosystem, or it may describe technical or social processes used by the community.  
 
-HIPs are classified into four categories:
+## HOW Types
 
-1. **Core**: Describes any change that affects most or all Holochain implementations, such as changes to the network protocol, DNA specification, or any change or addition that affects the interoperability of applications using Holochain.
+HOWs can be of different types as described in the `HOW` file hierarchy in this repo:
 
-2. **Application**: Describes standards, protocols, or conventions at the application level to promote interoperability between Holochain applications. This includes shared data schemas, common zome functions, standardized entry types, or cross-DNA communication patterns.
+```
+HOW/
+├─ info/             // General guidelines or information
+├─ social/
+│  ├─ process/       // Changes to HOW processes or other organizational/ecosystem processes
+│  │  ├─ how/        // This standard
+├─ technical/
+│  ├─ core/          // Changes to core Holochain protocols
+│  ├─ application/   // Ecosystem and Application standards and conventions
+```
 
-3. **Informational**: Describes a Holochain design issue, or provides general guidelines or information to the Holochain community, but does not propose a new feature.
+## Submitting a HOW
 
-4. **Process**: Describes a process surrounding Holochain, or proposes a change to a process.
+Anyone can propose a HOW for inclusion in this body of standards.  For precise description of the process please see the [how HOW](/HOW/social/process/how/how-v1.md) itself. But these are the rough steps: 
 
-## HIP Workflow
-
-### 1. Ideation Phase
+### 1. Ideation
 - Discuss your idea in the Holochain community forums
 - Get early feedback from core developers
-- Draft your proposal following the HIP template
+- Draft your proposal following the HOW template for where in the tree you it should go
 
 ### 2. Draft Submission
-- Fork the HIP repository
-- Copy the template file
-- Fill in the template with your proposal
-- Submit a Pull Request
+- Fork the HOW repository
+- Add your proposed HOW to the tree in your fork.
+- Submit a Pull Request using the `Draft Submission` template.
 
 ### 3. Review Process
-The HIP process follows these statuses:
+- Participate in the review process as team members and the community comment on and discuss your proposal
+- Address any concerns raised.
 
-- **DRAFT**: The initial status of a new HIP
-- **REVIEW**: Ready for peer review
+###  Statuses
+
+As a HOW goes through the process it will have one the following statuses
+
+- **DRAFT**: The initial status of a new HOW
+- **REVIEW**: Accepted for peer review by a steward
 - **LAST CALL**: Final review period (14 days)
-- **ACCEPTED**: Approved for implementation
-- **FINAL**: Implemented and deployed
+- **ALIVE**: Approved and adopted
 - **REJECTED**: Not accepted
 - **WITHDRAWN**: Removed by the author(s)
 - **DEFERRED**: Postponed for future consideration
 
-## HIP Format
+## HOW Format
 
-HIPs should be written in Markdown format. Each HIP must begin with a header preamble:
+HOWs are written in Markdown format, and have header preamble and a number of sections. The exact format of each how depends on where it is in the HOW tree.  You can see required sections and header elements for each part of the tree the `_requirements.md` documents. In general a HOW will look something like this:
 
-```yaml
+```
 ---
-HIP: <HIP number>
-Title: <HIP title>
-Author: <list of authors' names and optionally, email addresses>
-Status: <Draft | Review | Last Call | Accepted | Final | Rejected | Withdrawn | Deferred>
-Type: <Standard | Application | Informational | Process>
-Created: <date created on>
-Requires: <HIP number(s)> (optional)
-Replaces: <HIP number(s)> (optional)
+HOW: <path in HOW tree>
+Source: <path to process used to create this HOW>
+Status: <initial status from process>
+Created: <YYYY-MM-DD>
+Version: <version-type(semantic/index)/version-number>
 ---
+
+## Title
+The title of the standard being defined
+
+## Author(s)
+
+list of authors' names and optionally, email addresses
+
+## Abstract
+
+A short (~200 word) description of the technical/social/informational issue being addressed.
+
+## Copyright
+
+Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+
+## Motivation
+
+Clearly explain why this standard is being proposed. If the standard is a new version of an existing standard, or makes one obsolete explain why that is inadequate to address the problem that this HOW solves. Include specific use cases and describe why this HOW is valuable to the Holochain ecosystem.
+
+## Rationale
+
+Provide a rationale for the proposed standard. Explain how the proposed standard will fulfill the motivation and solve the problem described in the Abstract.
+```
