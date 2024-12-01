@@ -65,6 +65,7 @@ Version: <version-type(semantic/index)/version-number>
 ---
 
 ## Title
+
 The title of the standard being defined
 
 ## Author(s)
