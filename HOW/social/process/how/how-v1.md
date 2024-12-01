@@ -14,7 +14,7 @@ zippy <eric@holochain.org>, mattyg <matt@buildyourweb.app>
 
 ## Abstract
 
-This HOW describes a default process, format and workflow for how HOWs come into being. HOWs are the primary mechanism for proposing new features, collecting community input on an issue, and documenting decisions affecting Holochain and/or standards and processes used by Holochain hApps or by the Holochain ecosystem.  In other words, the HOW describes **how** the community comes into alignment.
+This HOW describes a default process, format and workflow for how HOWs come into being. HOWs are the primary mechanism for proposing new features, collecting community input on an issue, and documenting decisions affecting Holochain and/or standards and processes used by Holochain hApps or by the Holochain ecosystem.  In other words, this HOW describes **how** the community comes into alignment.
 
 ## Motivation
 
@@ -35,7 +35,7 @@ This standard, as the first and the default process for adding HOWs to the HOW t
 ## Specification
 
 ### General
-HOW standards are held in a git repo on github, and use a small number of Github's affordances to help with the process.  This backing-store is intended to be replaced by a Holochain app in the future.  The HOW processes and data formats consist of tree structure that holds all types of standards for the Holochain framework and ecosystem.
+HOW standards are held in a git repo on github, and use a small number of Github's affordances to help with the process.  This backing-store is intended to be replaced by a Holochain app in the future.  The HOW processes and data formats consist of a tree structure that holds all types of standards for the Holochain framework and ecosystem.
 
 ### HOW Tree
 
