@@ -46,11 +46,11 @@ As a HOW goes through the process it will have one the following statuses
 - **DRAFT**: The initial status of a new HOW
 - **REVIEW**: Accepted for peer review by a steward
 - **LAST CALL**: Final review period (14 days)
-- **ALIVE**: Approved and adopted
+- **LIVE**: Approved and adopted
 - **REJECTED**: Not accepted
 - **WITHDRAWN**: Removed by the author(s)
 - **DEFERRED**: Postponed for future consideration
-- **OBSOLETE**: Replaced by an updated version that is LIVE
+- **SUPERSEDED**: Replaced by an updated version that is LIVE
 
 ## HOW Format
 
@@ -83,7 +83,7 @@ Copyright and related rights waived via [CC0](https://creativecommons.org/public
 
 ## Motivation
 
-Clearly explain why this standard is being proposed. If the standard is a new version of an existing standard, or makes one obsolete explain why that is inadequate to address the problem that this HOW solves. Include specific use cases and describe why this HOW is valuable to the Holochain ecosystem.
+Clearly explain why this standard is being proposed. If the standard is a new version of an existing standard, or makes one SUPERSEDED explain why that is inadequate to address the problem that this HOW solves. Include specific use cases and describe why this HOW is valuable to the Holochain ecosystem.
 
 ## Rationale
 

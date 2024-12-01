@@ -12,4 +12,4 @@ An optional section that contains a reference/example implementation that people
 
 ## Backwards Compatibility Analysis
 
-When the standard either obsoletes or is a new version of a previous standard, this section that describes backward compatibility MUST be added.
+When the standard either SUPERSEDEDs or is a new version of a previous standard, this section that describes backward compatibility MUST be added.

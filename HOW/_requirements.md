@@ -23,7 +23,7 @@ Copyright and related rights waived via [CC0](https://creativecommons.org/public
 
 ## Motivation
 
-Clearly explain why this standard is being proposed. If the standard is a new version of an existing standard, or makes one obsolete explain why that is inadequate to address the problem that this HOW solves. Include specific use cases and describe why this HOW is valuable to the Holochain ecosystem.
+Clearly explain why this standard is being proposed. If the standard is a new version of an existing standard, or makes one SUPERSEDED explain why that is inadequate to address the problem that this HOW solves. Include specific use cases and describe why this HOW is valuable to the Holochain ecosystem.
 
 ## Rationale
 
