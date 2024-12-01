@@ -6,7 +6,7 @@ The technical specification MUST describe the syntax and semantics of any new st
 
 An optional section that describes any Data Integrity, Security, or Privacy concerns that pertain to the standard.  (Note about precise definitions of Integrity/Security/Privacy)
 
-## Reference Implementation
+## Reference Implementation (optional)
 
 An optional section that contains a reference/example implementation that people can use to assist in understanding or implementing this specification.
 
