@@ -80,7 +80,7 @@ This is the review stage, when Author(s) are ready for feedback from the core de
 2. Community members make comments and suggested changes on the pull request.
 3. Author(s) address feedback, making changes as desired, and keeping all commits in the git history without squashing or force-pushing.
 4. When most concerns appear to be addressed, the steward makes a call and changes the status to `LAST CALL` at that point the community and Author(s) have 14 days to raise and address any final concerns.
-5. Author(s) MAY chose to set the status to `WITHDRAWN` at any time during the Refine stage, at which point the process terminates.
+5. Author(s) MAY chose to set the status to `WITHDRAWN` at any time during the Define and Refine stages, at which point the process terminates.
 
 #### Align
 This is the concluding stage where either the core team or the working group decides on the HOW.   The statuses for this stage are: `REJECTED`, `ALIVE`, `DEFERRED`, `OBSOLETE`.  The steps in this stage are:
