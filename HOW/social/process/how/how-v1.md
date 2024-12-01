@@ -6,7 +6,7 @@ Version: idx/1
 ---
 
 ## Title
-Holochain Organizational Work Default Process
+HOW Default Process
 
 ## Author(s)
 
@@ -14,11 +14,11 @@ zippy <eric@holochain.org>, mattyg <matt@buildyourweb.app>
 
 ## Abstract
 
-This HOW describes a default process, format and workflow for Holochain Organizational Work standards (HOWs). HOWs are the primary mechanism for proposing new features, collecting community input on an issue, and documenting decisions affecting Holochain and/or standards and processes used by Holochain hApps or by the Holochain ecosystem. 
+This HOW describes a default process, format and workflow for how HOWs come into being. HOWs are the primary mechanism for proposing new features, collecting community input on an issue, and documenting decisions affecting Holochain and/or standards and processes used by Holochain hApps or by the Holochain ecosystem.  In other words, the HOW describes **how** the community comes into alignment.
 
 ## Motivation
 
-As Holochain and the Holochain ecosystems evolves, we need a standardized process for proposing, adopting, and documenting standards of all types, including: protocol creation and changes, feature additions, and process improvements, etc.. A well-defined HOW process helps:
+As Holochain and the Holochain ecosystems evolves, we want a standardized process for proposing, adopting, and documenting standards of all types, including: protocol creation and changes, feature additions, and process improvements, etc.. A well-defined HOW process helps:
 - Maintain transparency in decision-making
 - Ensure proper technical documentation
 - Foster community participation

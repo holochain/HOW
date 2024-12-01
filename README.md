@@ -1,10 +1,10 @@
-# Holochain Organization Work (HOW)
+# HOW
 
-This repo contains and embodies the standards process for the documentation and evolution of the Holochain Framework and Ecosystem.
+This repo contains and embodies the standards and processes for the documentation and evolution of the Holochain Framework and Ecosystem, in other words, **how** we come into alignment.  (If you want HOW to be an acronym it could be Holochain Organizational Work, or Holochain Ongoing Wishes, or the recursive How Organizing Works)
 
 ## What is a HOW
 
-A Holochain Organizational Work standard (HOW) is a design document providing for a technical or social/process standard or information to the Holochain community.  A HOW may describe a new feature for Holochain, its processes, or environment, it may describe a standard used by Holochain applications in the Ecosystem, or it may describe technical or social processes used by the community.  
+A HOW is a design document providing for a technical or social/process standard or information to the Holochain community.  A HOW may describe a new feature for Holochain, its processes, or environment, it may describe a standard used by Holochain applications in the Ecosystem, or it may describe technical or social processes used by the community.  
 
 ## HOW Types
 
