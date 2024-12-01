@@ -52,14 +52,15 @@ HOW/
 │  ├─ application/   // Ecosystem and Application standards and conventions
 ```
 
+All HOW standards MUST live as leaves of the tree.  The only files that MAY live at the branches in the tree are a `README.md` file describing the purpose of that part of the tree, and any other files related to that description, i.e. images, diagrams etc.
+
 ### HOW Format
 
-HOW standards live as markdown files in this directory structure.  The format of a HOW standard consists of a markdown header and a markdown body.  The content of the header and body MUST follow a template specified by:
+HOW standards live as markdown file named `how.md` at the leaves of this directory structure.  The format of a HOW standard file consists of a markdown header and a markdown body.  The content of the header and body MUST follow a template specified by:
 1.  merging the `_requirements.md` files that live at each level of the tree including and above the leaf where the HOW is being added
 2.  merging in any additional body sections or headers specified by a status change in a process flow template.
 
 The above format specification allows the templates for parts of the HOW tree to be contextually appropriate for that part of the tree.  For example, `technical/application` standards require a "Reference Implementation" section, what would not be appropriate for a `social/process` or `info` standard.
-
 
 ### HOW Workflow
 
@@ -123,7 +124,7 @@ What follows are the initial templates for the tree.  Note: As this process allo
 
 Changing a the HOW process itself is a special case of adding in new standards, as this may consist in changing the HOW hierarchy itself and thus merits some clarification.
 
-HOW tree additions or modifications MUST be submitted as HOWs in `/social/process/how` with name `tree_<slug>.md` where slug is a short-name for the intended modification.   Such HOW proposals MUST included in their `## Process Specification` section a description of how the tree is to be modified along with any `_requirement.md` template portions that should be added/modified/removed to the tree.  Also, any new node added to the tree SHOULD include a `README.md` file that describes the intent and purpose of that part of the tree.  A `README.md` MUST follow this format:
+HOW tree additions or modifications MUST be submitted as HOWs in `/social/process/how` with name `tree_<slug>.md` where slug is a short-name for the intended modification.   Such HOW proposals MUST included in their `## Process Specification` section a description of how the tree is to be modified along with any `_requirement.md` template portions that should be added/modified/removed to the tree.  Also, any new branch added to the tree SHOULD include a `README.md` file that describes the intent and purpose of that part of the tree.  A `README.md` MUST follow this format:
 
 ```
 # <Node Title>
