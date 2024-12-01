@@ -10,7 +10,7 @@ Holochain Organizational Work Default Process
 
 ## Author(s)
 
-mattyg <matt@buildyourweb.app>, zippy <eric@holochain.org>
+zippy <eric@holochain.org>, mattyg <matt@buildyourweb.app>
 
 ## Abstract
 
