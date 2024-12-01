@@ -2,7 +2,7 @@
 
 The technical specification MUST describe the syntax and semantics of any new standard. The specification should be detailed enough to allow competing, interoperable implementations.
 
-## Safety Considerations
+## Safety Considerations (optional)
 
 An optional section that describes any Data Integrity, Security, or Privacy concerns that pertain to the standard.  (Note about precise definitions of Integrity/Security/Privacy)
 
