@@ -1,4 +1,4 @@
-# Holochain Organization Work
+# Holochain Organization Work (HOW)
 
 This repo contains and embodies the standards process for the documentation and evolution of the Holochain Framework and Ecosystem.
 
