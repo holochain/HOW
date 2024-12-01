@@ -87,7 +87,7 @@ This is the concluding stage where either the core team or the working group dec
 
 1. What ever acceptance process is use by core team or working group is used (voting, consensus, coin-toss, etc) is used.
 2. Given the outcome of the process the status of the HOW is updated to `REJECTED`, `DEFERRED` or `ALIVE` as appropriate along with addition of sections as per `/social/process/how/_requirements.md`
-3. In the case of a HOW being accepted, the PR is merged into the repository.
+3. In the case of a HOW being accepted, the PR is merged into the repository, keeping the original git history without squashing.
 
 ### HOW Format & Templates
 
