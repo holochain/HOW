@@ -50,6 +50,7 @@ As a HOW goes through the process it will have one the following statuses
 - **REJECTED**: Not accepted
 - **WITHDRAWN**: Removed by the author(s)
 - **DEFERRED**: Postponed for future consideration
+- **OBSOLETE**: Replaced by an updated version that is LIVE
 
 ## HOW Format
 
