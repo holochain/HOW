@@ -23,7 +23,9 @@ The reason this standard was not accepted or was obsoleted.  In the case of obso
 
 ## Process Template Section: ALIVE
 
-When a standard is aligned on an is set to status ALIVE this section must be added:
+When a standard is set to status ALIVE, all previous versions of the same standard must be set to status SUPERSEDED.
+
+When a standard set to status ALIVE this section must be added:
 
 ### Aliveness
 
