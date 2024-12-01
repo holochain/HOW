@@ -78,7 +78,7 @@ This is the review stage, when Author(s) are ready for feedback from the core de
 
 1. A member of the core team or requested working group will do an initial evaluation of the PR.  If the a team member of working group member is willing to take on stewardship of this HOW they will update the header status to `REVIEW` and will add the section(s) specified in `/social/process/how/_requirements.md#Process Template Section: REVIEW`.  If no requested steward is willing take on the HOW it MUST be updated to status `REJECTED` and the section(s) specified in `/social/process/how/_requirements.md#Process Template Section: REJECTED` added.
 2. Community members make comments and suggested changes on the pull request.
-3. Author(s) address feedback, making changes as desired.
+3. Author(s) address feedback, making changes as desired, and keeping all commits in the git history without squashing or force-pushing.
 4. When most concerns appear to be addressed, the steward makes a call and changes the status to `LAST CALL` at that point the community and Author(s) have 14 days to raise and address any final concerns.
 5. Author(s) MAY chose to set the status to `WITHDRAWN` at any time during the Refine stage, at which point the process terminates.
 
