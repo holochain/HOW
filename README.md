@@ -1,6 +1,6 @@
 # HOW
 
-This repo contains and embodies the standards and processes for the documentation and evolution of the Holochain Framework and Ecosystem, in other words, **how** we come into alignment.  (If you want HOW to be an acronym it could be Holochain Organizational Work, or Holochain Ongoing Wishes, or the recursive How Organizing Works)
+This repo contains and embodies the standards and processes for the documentation and evolution of the Holochain Framework and Ecosystem, in other words, **how** we come into alignment.  (If you want HOW to be an acronym it could be Holochain Organizational Work, or Holochain Ongoing Wishes, or Holochain Organized Wisdom, or the recursive How Organizing Works)
 
 ## What is a HOW
 

@@ -90,6 +90,39 @@ This is the concluding stage where either the core team or the working group dec
 2. Given the outcome of the process the status of the HOW is updated to `REJECTED`, `DEFERRED` or `LIVE` as appropriate along with addition of sections as per `/social/process/how/_requirements.md`
 3. In the case of a HOW being accepted, the PR is merged into the repository, keeping the original git history without squashing.
 
+```mermaid
+stateDiagram
+   direction LR
+
+    state Define {
+        DRAFT
+        DRAFT --> WITHDRAWN
+        DRAFT --> REVIEW
+        WITHDRAWN
+    }
+
+    state Refine {
+        REVIEW
+        REVIEW --> LAST_CALL
+        REVIEW --> WITHDRAWN
+        LAST_CALL
+        LAST_CALL --> REJECTED
+        LAST_CALL --> LIVE
+        LAST_CALL --> DEFERRED
+        LAST_CALL --> WITHDRAWN
+    }
+
+    state Align {
+        REJECTED
+        ALIVE
+        ALIVE --> SUPERSEDED
+        DEFERRED
+        DEFERRED --> SUPERSEDED
+        SUPERSEDED
+    }
+```
+
+
 ### HOW Format & Templates
 
 As described in the HOW Tree section, a HOW consists of a header and sections specified by templates that are themselves broken into parts in the tree itself so as to create a contextually coherent grammar for different types of standards.
@@ -112,13 +145,11 @@ In the case of Process templates, there is a special format for sections to be a
 ... (more than one section may be specified)
 ```
 
-What follows are the initial templates for the tree.  Note: As this process allows for additions to the tree these templates will be added to.
+The initial `_requirements.md` templates for the tree are:
 
-(Copy files from tree here or just point to them?)
-
-#### `/HOW`
-#### `/HOW/social/process/how`
-#### `/HOW`
+- [`/HOW/`](/HOW/_requirements.md)
+- [`/HOW/social/process/`](/HOW/social/process/_requirements.md)
+- [`/HOW/tech/`](/HOW/tech/_requirements.md)
 
 ### Changes To the HOW tree
 

@@ -4,7 +4,7 @@ The technical specification MUST describe the syntax and semantics of any new st
 
 ## Safety Considerations (optional)
 
-An optional section that describes any Data Integrity, Security, or Privacy concerns that pertain to the standard.  (Note about precise definitions of Integrity/Security/Privacy)
+An optional section that describes any Data Integrity, Security, or Privacy concerns that pertain to the standard.
 
 ## Reference Implementation (optional)
 
