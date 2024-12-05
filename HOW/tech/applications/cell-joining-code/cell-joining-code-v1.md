@@ -1,6 +1,6 @@
 ---
-HOW: /tech/cell-joining-code
-Source: /social/process/how
+HOW: /tech/applications/cell-joining-code
+Source: /social/process/how/how-v1
 Status: Draft
 Created: 2024-11-23
 Version: idx/1
