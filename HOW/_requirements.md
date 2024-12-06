@@ -1,9 +1,9 @@
 ---
 HOW: <path in HOW tree>
 Source: <path to process used to create this HOW>
-Status: <initial status from process>
 Created: <YYYY-MM-DD>
 Version: <version-type(semantic/index)/version-number>
+Status: <initial status from process>
 ---
 
 ## Title
