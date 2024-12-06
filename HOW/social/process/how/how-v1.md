@@ -18,7 +18,7 @@ This HOW describes a default process, format and workflow for how HOWs come into
 
 ## Motivation
 
-As Holochain and the Holochain ecosystems evolves, we want a standardized process for proposing, adopting, and documenting standards of all types, including: protocol creation and changes, feature additions, and process improvements, etc.. A well-defined HOW process helps:
+As Holochain and the Holochain ecosystems evolves, we want a standardized process for proposing, adopting, and documenting standards of all types, including: protocol creation and changes, feature additions, and process improvements, etc. A well-defined HOW process helps:
 - Maintain transparency in decision-making
 - Ensure proper technical documentation
 - Foster community participation
