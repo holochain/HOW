@@ -1,6 +1,6 @@
 ---
 HOW: /social/process/how
-Source: /social/process/how
+Source: /social/process/how/how-v1.md
 Status: Draft
 Created: 2024-11-28
 Version: idx/1
@@ -70,7 +70,7 @@ HOWs transition through three stages: Define, Refine, & Align, each of which may
 #### Define
 This is the ideation stage, when a standard is first thought up and proposed.  The status for this stage is: `Draft`.  The steps in the stage are:
 
-1. Author(s) fork the HOW repository, and create a new HOW at the appropriate place in the HOW tree.  Author(s) MUST follow the template for that spot in the tree, as well as add this process (`/social/process/how/how-v1.md`) as the `Source` to the header of the HOW.
+1. Author(s) fork the HOW repository, and create a new HOW at the appropriate place in the HOW tree.  Author(s) MUST follow the template for that spot in the tree, as well as add this process (`/social/process/how/how-v1.md`) as the `Source` to the header of the HOW.  The directory name SHOULD be terse and descriptive of the proposed standard, i.e. one or two words.  If the name has more than one word it MUST be separated by a dash. 
 2. Author(s) MAY discuss ideas in various Holochain community forums.
 3. Author(s) MAY get early feedback from core developers.
 4. This stage is formally complete when a pull request is made against the HOW repository.  The pull request must be made using the "Create HOW draft" template. Additionally, when submitting the pull request, Author(s) MUST check "allow edits and access to secrets by maintainers".
