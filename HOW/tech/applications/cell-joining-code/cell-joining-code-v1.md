@@ -23,12 +23,11 @@ This HOW proposes a standardized URI format for cell joining codes that enables 
 Joining a Cell network requires multiple pieces of information to be shared: DNA hash, network seed, membrane proof, and app-specific metadata. Several apps have run into the need to share this information as a single string and implemented their own joining code format.
 
 A standardized joining code format would:
-- Simplify the network joining process
-- Simplify use of network joining codes in apps
-- Reduce user error during configuration
-- Enable one-click joining capabilities
-- Facilitate easier sharing of network access
-- Facilitate services providing "always-on" Cells: simply provide the DNA and joining code
+- Simplify the process for inviting someone into a network
+- Simplify the implementation of sending and receiving network invitations in apps
+- Facilitate services providing "always-on" nodes for a particular Cell
+- Support use of linking schemes to enable one-click joining of a network in a particular app
+- Encourage app developers to use the joining code pattern for sharing network access in their apps
 
 ## Rationale
 
