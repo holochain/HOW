@@ -41,7 +41,7 @@ This specification meets the criteria of the motivation because:
 The cell joining URI format MUST follow this structure:
 
 ```
-hc://join/<dna_hash>/<dna_modifiers>?proof=<membrane_proof>&metadata=<metadata>
+hc://join/<dna_hash>/<dna_modifiers>?proof=<membrane_proof>&name=<name>&metadata=<metadata>
 ```
 
 Where:
@@ -51,6 +51,7 @@ Where:
 - The `dna_hash` component MUST be included and MUST contain the DNA hash base64 encoded using the URL-safe alphabet (with - and _) specified in [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648#section-5) without any added padding.
 - The `dna_modifiers` component MUST be included and MUST contain the DNA modifiers base64 encoded using the URL-safe alphabet (with - and _) specified in [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648#section-5) without any added padding.
 - The `proof` query parameter MAY be included and when present MUST contain the membrane proof value base64 encoded using the URL-safe alphabet (with - and _) specified in [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648#section-5) without any added padding.
+- The `name` query parameter MAY be included and when present MUST contain a string that will be set as the name of the ClonedCell.
 - The `metadata` query parameter MAY be included and when present MUST contain any app-specific metadata base64 encoded using the URL-safe alphabet (with - and _) specified in [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648#section-5) without any added padding.
 
 The components MUST be properly URL encoded according to RFC 3986.
