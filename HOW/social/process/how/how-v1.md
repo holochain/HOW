@@ -87,7 +87,7 @@ This is the review stage, when Author(s) are ready for feedback from the core de
 #### Align
 This is the concluding stage where either the core team or the working group decides on the HOW.   The statuses for this stage are: `REJECTED`, `LIVE`, `DEFERRED`.  The steps in this stage are:
 
-1. What ever acceptance process is use by core team or working group is used (voting, consensus, coin-toss, etc) is used.
+1. Whatever acceptance process is use by core team or working group is used (voting, consensus, coin-toss, etc) is used.
 2. Given the outcome of the process the status of the HOW is updated to `REJECTED`, `DEFERRED` or `LIVE` as appropriate along with addition of sections as per `/social/process/how/_requirements.md`
 3. In the case of a HOW being accepted, the PR is merged into the repository, keeping the original git history without squashing.
 
