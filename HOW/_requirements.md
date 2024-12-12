@@ -11,7 +11,7 @@ The title of the standard being defined
 
 ## Author(s)
 
-list of authors' names and optionally, email addresses
+list of authors' names and optionally, email or other contact addresses
 
 ## Abstract
 

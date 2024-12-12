@@ -27,8 +27,8 @@ When a standard is set to status LIVE, all previous versions of the same standar
 
 When a standard set to status LIVE this section must be added:
 
-### Liveness
+### Effective
 
-Liveness Date: <date> 
+Effective From: <date> 
 
 This section MAY include any caveats, intentions for future deprecation of this standard.
