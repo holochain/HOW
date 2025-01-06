@@ -10,6 +10,6 @@ An optional section that describes any Data Integrity, Security, or Privacy conc
 
 An optional section that contains a reference/example implementation that people can use to assist in understanding or implementing this specification.
 
-## Backwards Compatibility Analysis
+## Backward Compatibility Analysis
 
 When the standard either SUPERSEDEDs or is a new version of a previous standard, this section that describes backward compatibility MUST be added.

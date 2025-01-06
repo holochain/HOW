@@ -19,7 +19,7 @@ This HOW describes a default process, format and workflow for how HOWs come into
 
 ## Motivation
 
-As Holochain and the Holochain ecosystems evolves, we want a standardized process for proposing, adopting, and documenting standards of all types, including: protocol creation and changes, feature additions, and process improvements, etc. A well-defined HOW process helps:
+As Holochain and the Holochain ecosystem evolve, we want a standardized process for proposing, adopting, and documenting standards of all types, including: protocol creation and changes, feature additions, and process improvements, etc. A well-defined HOW process helps:
 - Maintain transparency in decision-making
 - Ensure proper technical documentation
 - Foster community participation
@@ -31,7 +31,7 @@ As Holochain and the Holochain ecosystems evolves, we want a standardized proces
 
 This standard, as the first and the default process for adding HOWs to the HOW tree fully addresses the motivation:
 - as this process is implemented in an open github repo it both maintains transparency of the decisions made and encourages public feedback and comments in the process, as well as tracks all changes made over time.
-- the the HOW tree and the formal process for requirements for parts of the tree and adding to it ensures proper technical documentation as well as creates a clear method for evolving the process itself.
+- the HOW tree and the formal process for requirements for parts of the tree and adding to it ensures proper technical documentation as well as creates a clear method for evolving the process itself.
 
 ## Specification
 
@@ -40,7 +40,7 @@ HOW standards are held in a git repo on github, and use a small number of Github
 
 ### HOW Tree
 
-Rather than using the pattern of storing and identifying standards as a long numerical list (as in RFCs or EIPs), HOWs are identified by a semantic path in a hierarchy.  This allows their relationship and types to be more readily understood.  The HOW tree is stored directly as a file hierarchy in a git repo. The HOW tree encompasses different types of standards where the type is represented as the directory structure of in the tree.  The initial structure is:
+Rather than using the pattern of storing and identifying standards as a long numerical list (as in RFCs or EIPs), HOWs are identified by a semantic path in a hierarchy.  This allows their relationship and types to be more readily understood.  The HOW tree is stored directly as a file hierarchy in a git repo. The HOW tree encompasses different types of standards where the type is represented as the directory structure in the tree.  The initial structure is:
 
 ```
 HOW/

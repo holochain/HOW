@@ -28,7 +28,7 @@ Anyone can propose a HOW for inclusion in this body of standards.  For precise d
 ### 1. Ideation
 - Discuss your idea in the Holochain community forums
 - Get early feedback from core developers
-- Draft your proposal following the HOW template for where in the tree you it should go
+- Draft your proposal following the HOW template for where in the tree it should go
 
 ### 2. Draft Submission
 - Fork the HOW repository
