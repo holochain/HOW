@@ -57,7 +57,7 @@ All HOW standards MUST live as leaves of the tree.  The only files that MAY live
 
 ### HOW Format
 
-HOW standards live as markdown file named `how.md` at the leaves of this directory structure.  The format of a HOW standard file consists of a markdown header and a markdown body.  The content of the header and body MUST follow a template specified by:
+HOW standards live as markdown file named `how-<VERSION>.md` at the leaves of this directory structure, where `<VERSION>` is the version number of the standard.  The format of a HOW standard file consists of a markdown header and a markdown body.  The content of the header and body MUST follow a template specified by:
 1.  merging the `_requirements.md` files that live at each level of the tree including and above the leaf where the HOW is being added
 2.  merging in any additional body sections or headers specified by a status change in a process flow template.
 
