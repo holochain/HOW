@@ -7,7 +7,7 @@ Status: <initial status from process>
 ---
 
 ## Title
-The title of the standard being defined
+The title of the standard, process, or pattern being defined
 
 ## Author(s)
 
