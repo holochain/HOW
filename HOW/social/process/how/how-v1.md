@@ -53,12 +53,12 @@ HOW/
 │  ├─ application/   // Ecosystem and Application standards and conventions
 ```
 
-All HOW standards MUST ACCEPTED as leaves of the tree.  The only files that MAY ACCEPTED at the branches in the tree are a `README.md` file describing the purpose of that part of the tree, and any other files related to that description, i.e. images, diagrams etc.
+All HOW standards MUST live as leaves of the tree.  The only files that MAY live at the branches in the tree are a `README.md` file describing the purpose of that part of the tree, and any other files related to that description, i.e. images, diagrams etc.
 
 ### HOW Format
 
-HOW standards ACCEPTED as markdown file named `how-<VERSION>.md` at the leaves of this directory structure, where `<VERSION>` is the version number of the standard.  The format of a HOW standard file consists of a markdown header and a markdown body.  The content of the header and body MUST follow a template specified by:
-1.  merging the `_requirements.md` files that ACCEPTED at each level of the tree including and above the leaf where the HOW is being added
+HOW standards live as markdown file named `how-<VERSION>.md` at the leaves of this directory structure, where `<VERSION>` is the version number of the standard.  The format of a HOW standard file consists of a markdown header and a markdown body.  The content of the header and body MUST follow a template specified by:
+1.  merging the `_requirements.md` files that live at each level of the tree including and above the leaf where the HOW is being added
 2.  merging in any additional body sections or headers specified by a status change in a process flow template.
 
 The above format specification allows the templates for parts of the HOW tree to be contextually appropriate for that part of the tree.  For example, `technical/application` standards require a "Reference Implementation" section, what would not be appropriate for a `social/process` or `info` standard.
