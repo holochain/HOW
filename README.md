@@ -46,11 +46,11 @@ As a HOW goes through the process it will have one the following statuses
 - **DRAFT**: The initial status of a new HOW
 - **REVIEW**: Accepted for peer review by a steward
 - **LAST CALL**: Final review period (14 days)
-- **LIVE**: Approved and adopted
-- **REJECTED**: Not accepted
+- **ACCEPTED**: Approved and adopted
+- **ABANDONED**: Not accepted or decommissioned
 - **WITHDRAWN**: Removed by the author(s)
 - **DEFERRED**: Postponed for future consideration
-- **SUPERSEDED**: Replaced by an updated version that is LIVE
+- **SUPERSEDED**: Replaced by an updated version that is ACCEPTED
 
 ## HOW Format
 

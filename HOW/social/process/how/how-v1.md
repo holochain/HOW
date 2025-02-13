@@ -53,12 +53,12 @@ HOW/
 │  ├─ application/   // Ecosystem and Application standards and conventions
 ```
 
-All HOW standards MUST live as leaves of the tree.  The only files that MAY live at the branches in the tree are a `README.md` file describing the purpose of that part of the tree, and any other files related to that description, i.e. images, diagrams etc.
+All HOW standards MUST ACCEPTED as leaves of the tree.  The only files that MAY ACCEPTED at the branches in the tree are a `README.md` file describing the purpose of that part of the tree, and any other files related to that description, i.e. images, diagrams etc.
 
 ### HOW Format
 
-HOW standards live as markdown file named `how-<VERSION>.md` at the leaves of this directory structure, where `<VERSION>` is the version number of the standard.  The format of a HOW standard file consists of a markdown header and a markdown body.  The content of the header and body MUST follow a template specified by:
-1.  merging the `_requirements.md` files that live at each level of the tree including and above the leaf where the HOW is being added
+HOW standards ACCEPTED as markdown file named `how-<VERSION>.md` at the leaves of this directory structure, where `<VERSION>` is the version number of the standard.  The format of a HOW standard file consists of a markdown header and a markdown body.  The content of the header and body MUST follow a template specified by:
+1.  merging the `_requirements.md` files that ACCEPTED at each level of the tree including and above the leaf where the HOW is being added
 2.  merging in any additional body sections or headers specified by a status change in a process flow template.
 
 The above format specification allows the templates for parts of the HOW tree to be contextually appropriate for that part of the tree.  For example, `technical/application` standards require a "Reference Implementation" section, what would not be appropriate for a `social/process` or `info` standard.
@@ -78,17 +78,17 @@ This is the ideation stage, when a standard is first thought up and proposed.  T
 #### Refine
 This is the review stage, when Author(s) are ready for feedback from the core developers and the community at large. The status for this stage are: `REVIEW`, `LAST CALL`.  The steps in this stage are:
 
-1. A member of the core team or requested working group will do an initial evaluation of the PR.  If a team member or working group member is willing to take on stewardship of this HOW they will update the header status to `REVIEW` and will add the section(s) specified in `/social/process/how/_requirements.md#Process Template Section: REVIEW`.  If no requested steward is willing take on the HOW it MUST be updated to status `REJECTED` and the section(s) specified in `/social/process/how/_requirements.md#Process Template Section: REJECTED` added.
+1. A member of the core team or requested working group will do an initial evaluation of the PR.  If a team member or working group member is willing to take on stewardship of this HOW they will update the header status to `REVIEW` and will add the section(s) specified in `/social/process/how/_requirements.md#Process Template Section: REVIEW`.  If no requested steward is willing take on the HOW it MUST be updated to status `ABANDONED` and the section(s) specified in `/social/process/how/_requirements.md#Process Template Section: ABANDONED` added.
 2. Community members make comments and suggested changes on the pull request.
 3. Author(s) address feedback, making changes as desired, and keeping all commits in the git history without squashing or force-pushing.
-4. When most concerns appear to be addressed, the steward makes a call and changes the status to `LAST CALL` at that point the community and Author(s) have 14 days to raise and address any final concerns.
+4. When most concerns appear to be addressed, the steward makes the decision to change the status to `LAST CALL` at that point the community and Author(s) have 14 days to raise and address any final concerns.
 5. Author(s) MAY chose to set the status to `WITHDRAWN` at any time during the Define and Refine stages, at which point the process terminates.
 
 #### Align
-This is the concluding stage where either the core team or the working group decides on the HOW.   The statuses for this stage are: `REJECTED`, `LIVE`, `DEFERRED`.  The steps in this stage are:
+This is the concluding stage where either the core team or the working group decides on the HOW.   The statuses for this stage are: `ABANDONED`, `ACCEPTED`, `DEFERRED`.  The steps in this stage are:
 
 1. Whatever acceptance process is use by core team or working group is used (voting, consensus, coin-toss, etc) is used.
-2. Given the outcome of the process the status of the HOW is updated to `REJECTED`, `DEFERRED` or `LIVE` as appropriate along with addition of sections as per `/social/process/how/_requirements.md`
+2. Given the outcome of the process the status of the HOW is updated to `ABANDONED`, `DEFERRED` or `ACCEPTED` as appropriate along with addition of sections as per `/social/process/how/_requirements.md`
 3. In the case of a HOW being accepted, the PR is merged into the repository, keeping the original git history without squashing.
 
 ```mermaid
@@ -107,16 +107,16 @@ stateDiagram
         REVIEW --> LAST_CALL
         REVIEW --> WITHDRAWN
         LAST_CALL
-        LAST_CALL --> REJECTED
-        LAST_CALL --> LIVE
+        LAST_CALL --> ABANDONED
+        LAST_CALL --> ACCEPTED
         LAST_CALL --> DEFERRED
         LAST_CALL --> WITHDRAWN
     }
 
     state Align {
-        REJECTED
-        ALIVE
-        ALIVE --> SUPERSEDED
+        ABANDONED
+        AACCEPTED
+        AACCEPTED --> SUPERSEDED
         DEFERRED
         DEFERRED --> SUPERSEDED
         SUPERSEDED

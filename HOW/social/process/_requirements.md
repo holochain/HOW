@@ -1,5 +1,5 @@
 ---
-Status: <DRAFT|REVIEW|REJECTED|SUPERSEDED|DEFERRED|LIVE>
+Status: <DRAFT|REVIEW|ABANDONED|SUPERSEDED|DEFERRED|ACCEPTED>
 ---
 ## Process Specification
 
@@ -13,19 +13,19 @@ After a standard is drafted, when it moves into the `REVIEW` status the followin
 
 Person or Working Group who is stewarding this HOW and is responsible for moving it through the workflow as specified by the process.
 
-## Process Template Section: REJECTED, SUPERSEDED, DEFERRED
+## Process Template Section: ABANDONED, SUPERSEDED, DEFERRED
 
-When a standard is not accepted or is superseded the following section must be added:
+When a standard is not accepted or is abandoned or superseded the following section must be added:
 
 ### <status> Reason
 
-The reason this standard was not accepted or was superseded.  In the case of superseding, the content of this section MUST include which HOW, or HOW version makes this HOW obsolete.
+The reason this standard was not accepted, abandoned or was superseded.  In the case of Rejection, the content of this section MUST included the reason for the rejection. In the case of superseding, the content of this section MUST include which HOW, or HOW version makes this HOW obsolete.
 
-## Process Template Section: LIVE
+## Process Template Section: ACCEPTED
 
-When a standard is set to status LIVE, all previous versions of the same standard must be set to status SUPERSEDED.
+When a standard is set to status ACCEPTED, all previous versions of the same standard must be set to status SUPERSEDED.
 
-When a standard set to status LIVE this section must be added:
+When a standard set to status ACCEPTED this section must be added:
 
 ### Effective
 
