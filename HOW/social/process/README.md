@@ -1,0 +1,3 @@
+# Process Standards
+
+Standards that describe a process surrounding Holochain, or proposes a change to a process.  Processes are intended as formal social protocols that can are engaged in by people to coordinate action, from processes like this How process itself, to voting and other decision making processes.  This is to distinguish from other social agreements like codes-of-conduct, which may also be aligned on in some parts of the How tree.
