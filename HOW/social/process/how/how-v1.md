@@ -53,12 +53,12 @@ HOW/
 │  ├─ application/   // Ecosystem and Application standards and conventions
 ```
 
-All HOW standards MUST live as leaves of the tree.  The only files that MAY live at the branches in the tree are a `README.md` file describing the purpose of that part of the tree, and any other files related to that description, i.e. images, diagrams etc.
+All HOW standards MUST live as leaves of the tree.  The only files that MAY live at the branches in the tree are a `README.md` file describing the purpose of that part of the tree, any other files related to that description, i.e. images, diagrams etc., and a file titled `_requirements.md` that specify the requirements for all documents below that branch of the tree.
 
 ### HOW Format
 
 HOW standards live as markdown file named `how-<VERSION>.md` at the leaves of this directory structure, where `<VERSION>` is the version number of the standard.  The format of a HOW standard file consists of a markdown header and a markdown body.  The content of the header and body MUST follow a template specified by:
-1.  merging the `_requirements.md` files that live at each level of the tree including and above the leaf where the HOW is being added
+1.  nearest parent `_requirements.md` above where that HOW standard lives in the tree
 2.  merging in any additional body sections or headers specified by a status change in a process flow template.
 
 The above format specification allows the templates for parts of the HOW tree to be contextually appropriate for that part of the tree.  For example, `technical/application` standards require a "Reference Implementation" section, what would not be appropriate for a `social/process` or `info` standard.
@@ -151,6 +151,8 @@ The initial `_requirements.md` templates for the tree are:
 - [`/HOW/`](/HOW/_requirements.md)
 - [`/HOW/social/process/`](/HOW/social/process/_requirements.md)
 - [`/HOW/tech/`](/HOW/tech/_requirements.md)
+
+NOTE: when a `_requirements.md` file is added to the tree, it must merge in the requirements of the closest parent `_requirement.md` file.  This creates a small risk of incorrectly duplicated information, but it makes it easier at any point in the tree to understand what the requirements are for adding a standard at that place in the tree.
 
 ### Changes To the HOW tree
 
