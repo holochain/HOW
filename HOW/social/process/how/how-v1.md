@@ -1,7 +1,7 @@
 ---
 HOW: /social/process/how
 Source: /social/process/how/how-v1.md
-Status: Draft
+Status: REVIEW
 Created: 2024-11-28
 Version: idx/1
 ---
@@ -12,6 +12,10 @@ HOW Default Process
 ## Author(s)
 
 zippy <eric@holochain.org>, mattyg <matt@buildyourweb.app>
+
+### Steward
+
+Holochain Foundation Council & Holochain dev team.
 
 ## Abstract
 
