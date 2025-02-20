@@ -1,3 +1,10 @@
+---
+HOW: <path in HOW tree>
+Source: <path to process used to create this HOW>
+Created: <YYYY-MM-DD>
+Version: <version-type(semantic/index)/version-number>
+Status: <initial status from process>
+---
 ## Technical Specification
 
 The technical specification MUST describe the syntax and semantics of any new standard. The specification should be detailed enough to allow competing, interoperable implementations.
