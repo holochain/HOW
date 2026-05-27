@@ -167,6 +167,7 @@ export class HowController extends ScopedElementsMixin(LitElement) {
     }
     this.subscribeProfile()
     this.checkInit()
+    this.checkWeaveRole()
   }
  
   private _getFirst(units: Dictionary<Unit>): EntryHashB64 {
@@ -259,11 +260,36 @@ export class HowController extends ScopedElementsMixin(LitElement) {
   }
   clickCount = 0
   @state() showInit = false
-  adminCheck = () => { 
+  // In a Moss/Weave context we know whether the current agent instantiated this tool
+  // (vs. merely activated/joined it), so we can decide directly whether to offer initialization.
+  @state() amInstaller = false
+  adminCheck = () => {
     this.clickCount += 1
     if (this.clickCount == 5) {
       this.clickCount = 0
       this.showInit = true
+    }
+  }
+
+  // True when running as a Moss/Weave tool (the store is constructed with a WeaveClient).
+  get inWeave(): boolean {
+    return !!this._store.weClient
+  }
+
+  // Determine whether the current agent instantiated this tool (vs. activated/joined it).
+  // The instantiator is the agent who installed the applet; everyone else joined an existing
+  // instance. Used to offer tree initialization without the logo easter-egg.
+  async checkWeaveRole() {
+    const weClient = this._store.weClient
+    if (!weClient) return
+    try {
+      const renderInfo: any = weClient.renderInfo
+      if (renderInfo?.type !== "applet-view") return
+      const installer = await weClient.toolInstaller(renderInfo.appletHash)
+      const me = renderInfo.appletClient.myPubKey
+      this.amInstaller = !!installer && encodeHashToBase64(installer) === encodeHashToBase64(me)
+    } catch (e) {
+      console.warn("How: could not determine tool installer", e)
     }
   }
 
@@ -466,6 +492,18 @@ export class HowController extends ScopedElementsMixin(LitElement) {
 
   render() {
     if (!this.initialized) {
+      // In a Moss/Weave context we know whether we're the progenitor, so the message is
+      // definite and initialization is offered to the progenitor without the logo easter-egg.
+      // Outside Moss, behaviour is unchanged (vague message, 5-click reveal).
+      let welcomeMessage
+      if (this.inWeave) {
+        welcomeMessage = this.amInstaller
+          ? html`You are the first one here!`
+          : html`Your node hasn't synchronized yet with the network.`
+      } else {
+        welcomeMessage = html`Either your node hasn't synchronized yet with the network, or you are the first one here!`
+      }
+      const offerInit = this.inWeave ? this.amInstaller : this.showInit
       return html`
 
       <div class="initializing">
@@ -473,41 +511,41 @@ export class HowController extends ScopedElementsMixin(LitElement) {
         <div class="wrapper">
           <div class="about-event"/>
             <img class="how-welcome" src=${aliveImage}
-            @click=${()=>this.adminCheck()}>
+            @click=${()=>{ if (!this.inWeave) this.adminCheck() }}>
             <h3>Welcome to How!</h3>
-            <p>Either your node hasn't synchronized yet with the network, or you are the first one here! 
-            ${this.showInit ? html`
+            <p>${welcomeMessage}</p>
+            <div class="init-actions">
+            ${offerInit ? html`
             <h3>Initialize with: </h3>
             <mwc-button
               id="primary-action-button"
               slot="primaryAction"
               @click=${()=>this.addInitialSimple()}
               >Default Tree</mwc-button
-            > 
-            or<br />
+            >
+            <div class="or">or</div>
             <mwc-button
               id="primary-action-button"
               slot="primaryAction"
               @click=${()=>this.addInitialHolochain()}
               >Holochain Community Standards</mwc-button
-            > 
-            or<br />
+            >
+            <div class="or">or</div>
             <mwc-button
               id="primary-action-button"
               slot="primaryAction"
               @click=${()=>this._fileInput.click()}
               >Import JSON File</mwc-button
-            > 
-            
+            >
             ` : html`
             <mwc-button
               id="primary-action-button"
               slot="primaryAction"
               @click=${()=>this.checkInit()}
               >Reload</mwc-button
-            > 
+            >
             `}
-            </p>
+            </div>
           </div>
         </div>
       </div>
@@ -648,6 +686,13 @@ export class HowController extends ScopedElementsMixin(LitElement) {
           text-align: center;
           margin-top: 15px;
           margin-bottom: 0;
+        }
+        .about-event .init-actions {
+          text-align: center;
+          margin-top: 15px;
+        }
+        .about-event .init-actions .or {
+          margin: 6px 0;
         }
         .how-welcome {
           width: 200px;
