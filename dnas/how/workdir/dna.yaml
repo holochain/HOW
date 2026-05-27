@@ -1,28 +1,21 @@
 ---
-manifest_version: "1"
+manifest_version: "0"
 name: how
 integrity:
   network_seed: ~
   properties: ~
-  origin_time: 1669136217555883
   zomes:
     - name: profiles_integrity
-      hash: ~
-      bundled: "../../../target/wasm32-unknown-unknown/release/profiles_integrity.wasm"
-      dependencies: ~
+      path: ../../../target/wasm32-unknown-unknown/release/profiles_integrity.wasm
     - name: how_integrity
-      hash: ~
-      bundled: "../../../target/wasm32-unknown-unknown/release/how_integrity.wasm"
-      dependencies: ~
+      path: ../../../target/wasm32-unknown-unknown/release/how_integrity.wasm
 coordinator:
   zomes:
     - name: profiles
-      hash: ~
-      bundled: "../../../target/wasm32-unknown-unknown/release/profiles.wasm"
+      path: ../../../target/wasm32-unknown-unknown/release/profiles.wasm
       dependencies:
         - name: profiles_integrity
     - name: how
-      hash: ~
-      bundled: "../../../target/wasm32-unknown-unknown/release/how.wasm"
+      path: ../../../target/wasm32-unknown-unknown/release/how.wasm
       dependencies:
         - name: how_integrity

@@ -15,10 +15,10 @@ export const hashEqual = (a:EntryHash, b:EntryHash) : boolean => {
 export const getMyDna = async (role:string, client: AppClient) : Promise<DnaHash|undefined>  => {
   const appInfo = await client.appInfo();
   if (appInfo) {
-    const dnaHash = (appInfo.cell_info[role][0] as any)[
-      CellType.Provisioned
-    ].cell_id[0];
-    return dnaHash
+    const cellInfo = appInfo.cell_info[role][0];
+    if (cellInfo.type === CellType.Provisioned) {
+      return cellInfo.value.cell_id[0];
+    }
   }
   return undefined
 } 

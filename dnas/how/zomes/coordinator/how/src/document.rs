@@ -103,7 +103,7 @@ fn _get_docs(get_input: Vec<GetInput>) -> HowResult<Vec<DocumentOutput>> {
             Details::Entry(EntryDetails { entry, updates, actions , deletes, ..}) => {
                 let doc = entry.try_into().ok()?;
                 let hash = hash_entry(&doc).ok()?;
-                let links = get_link_details(hash.clone(), LinkTypes::Mark, None, GetOptions::default()).ok()?;
+                let links = get_links_details(LinkQuery::try_new(hash.clone(), LinkTypes::Mark).ok()?, GetStrategy::Network).ok()?;
                 let mut marks = vec![];
                 for (create,_) in links.into_inner() {
                     let x = create.action();

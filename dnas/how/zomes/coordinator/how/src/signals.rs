@@ -26,8 +26,7 @@ impl SignalPayload {
 }
 
 #[hdk_extern]
-fn recv_remote_signal(signal: ExternIO) -> ExternResult<()> {
-    let sig: SignalPayload = signal.decode().map_err(|e| wasm_error!(e))?;
+fn recv_remote_signal(sig: SignalPayload) -> ExternResult<()> {
     debug!("Received signal {:?}", sig);
     Ok(emit_signal(&sig)?)
 }
@@ -48,6 +47,6 @@ fn notify(input: NotifyInput) -> ExternResult<()> {
         folks.push(a.into())
     }
     debug!("Sending signal {:?} to {:?}", input.signal, input.folks);
-    send_remote_signal(ExternIO::encode(input.signal).map_err(|e| wasm_error!(e))?,folks)?;
+    send_remote_signal(input.signal, folks)?;
     Ok(())
 }

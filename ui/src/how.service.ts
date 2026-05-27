@@ -1,4 +1,4 @@
-import { AppClient, EntryHashB64, AgentPubKeyB64, AppCallZomeRequest, RoleName, encodeHashToBase64, decodeHashFromBase64, EntryHash } from '@holochain/client';
+import { AppClient, EntryHashB64, AgentPubKeyB64, RoleNameCallZomeRequest, RoleName, encodeHashToBase64, decodeHashFromBase64, EntryHash } from '@holochain/client';
 import { UnitInput, RustNode, RustTree, Initialization, DocumentOutput, DocumentInput, UpdateDocumentInput, AdvanceStateInput, UnitOutput, MarkDocumentInput, HowSignal, Unit, UpdateUnitInput} from './types';
 import { ActionHash  } from '@holochain/client';
 
@@ -73,7 +73,7 @@ export class HowService {
   }
 
   private callZome(fnName: string, payload: any) {
-    const req: AppCallZomeRequest = {
+    const req: RoleNameCallZomeRequest = {
       role_name: this.roleName,
       zome_name: this.zomeName,
       fn_name: fnName,

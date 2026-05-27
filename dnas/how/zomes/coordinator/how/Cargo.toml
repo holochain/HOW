@@ -13,5 +13,6 @@ thiserror = "1.0.20"
 hdk = { workspace = true }
 
 serde = { workspace = true }
+holochain_serialized_bytes = { workspace = true }
 
-how_integrity = { workspace = true } 
+how_integrity = { workspace = true }

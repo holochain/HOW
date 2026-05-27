@@ -1,5 +1,5 @@
 import { EntryHashB64, AgentPubKeyB64, AppClient, RoleName, encodeHashToBase64, decodeHashFromBase64, AgentPubKey, DnaHash, EntryHash, AppSignal, Signal, SignalType } from '@holochain/client';
-import { AgentPubKeyMap, EntryRecord } from '@holochain-open-dev/utils';
+import { EntryRecord } from '@holochain-open-dev/utils';
 import { writable, Writable, derived, Readable, get } from 'svelte/store';
 import cloneDeep from 'lodash/cloneDeep';
 import { HowService } from './how.service';
@@ -89,9 +89,9 @@ export class HowStore {
 
   async initialize() {
     this.client.on( 'signal', async (signal:Signal) => {
-      if (SignalType.App in signal) {
-        console.log("SIGNAL",signal.App.payload)
-        const payload  = signal.App.payload as HowSignal
+      if (signal.type === SignalType.App) {
+        console.log("SIGNAL",signal.value.payload)
+        const payload  = signal.value.payload as HowSignal
         switch(payload.message.type) {
         case "NewUnit":
           if (!get(this.units)[payload.unitHash]) {

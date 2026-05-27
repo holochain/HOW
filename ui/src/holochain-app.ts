@@ -28,7 +28,7 @@ import {howContext} from "./types"
 import { localized, msg } from '@lit/localize';
 
 import { ScopedElementsMixin } from "@open-wc/scoped-elements";
-import { WeaveClient, isWeContext, initializeHotReload, WAL, Hrl } from '@theweave/api';
+import { WeaveClient, isWeaveContext, initializeHotReload, WAL, Hrl } from '@theweave/api';
 import { appletServices } from './we';
 import { HowUnit } from './elements/how-unit';
 import { HowDocument } from './elements/how-document';
@@ -64,7 +64,7 @@ export class HolochainApp extends ScopedElementsMixin(LitElement) {
 
   async firstUpdated() {
 
-    const config:ProfilesConfig = {
+    const config:Partial<ProfilesConfig> = {
       minNicknameLength: 3,
       avatarMode: "avatar-optional",
       additionalFields: [], // "Location","Hashtags", "Bio"// Custom app level profile fields
@@ -78,7 +78,7 @@ export class HolochainApp extends ScopedElementsMixin(LitElement) {
     }
     
     let tokenResp;
-    if (!isWeContext()) {
+    if (!isWeaveContext()) {
       const adminPort : string = import.meta.env.VITE_ADMIN_PORT
       const appPort : string = import.meta.env.VITE_APP_PORT
       const url = appPort ? `ws://localhost:${appPort}` : 'ws://localhost';
@@ -153,7 +153,7 @@ export class HolochainApp extends ScopedElementsMixin(LitElement) {
                 throw new Error("Unsupported applet-view type");
             }
             break;
-          case "cross-applet-view":
+          case "cross-group-view":
             switch (weClient.renderInfo.view.type) {
               case "main":
                 // here comes your rendering logic for the cross-applet main view

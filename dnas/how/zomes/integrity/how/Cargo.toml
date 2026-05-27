@@ -9,6 +9,6 @@ name = "how_integrity"
 
 [dependencies]
 hdi = { workspace = true }
-hdk = { workspace = true }
 
 serde = { workspace = true }
+holochain_serialized_bytes = { workspace = true }

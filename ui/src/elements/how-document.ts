@@ -404,7 +404,7 @@ import { weaveUrlFromWal, weaveUrlToWAL } from "@theweave/api";
 
     private async addAttachment() {
       if (this._store.weClient) {
-        const wal = await this._store.weClient.userSelectWal()
+        const wal = await this._store.weClient.assets.userSelectAsset()
         if (wal) {
           const doc : Document = this._documents.value[this.currentDocumentEh]
           await this._store.markDocument(this.path, [{hash: doc.documentHash!, mark: weaveUrlFromWal(wal), markType: MarkTypes.Attachment}])            }
@@ -582,10 +582,10 @@ import { weaveUrlFromWal, weaveUrlToWAL } from "@theweave/api";
                 <div class="wal-link">
                   <sl-button size="small"
                     @click=${()=>{
-                      this._store.weClient?.openWal(wal)
+                      this._store.weClient?.openAsset(wal)
                       }}
                   >
-                  ${until(this._store.weClient.assetInfo(wal)
+                  ${until(this._store.weClient.assets.assetInfo(wal)
                     .then(res=> {
                       if (res) {
                         const assetInfo = res.assetInfo

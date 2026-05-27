@@ -1,5 +1,5 @@
 ---
-manifest_version: "1"
+manifest_version: "0"
 name: how
 description: ~
 roles:
@@ -8,10 +8,10 @@ roles:
       strategy: create
       deferred: false
     dna:
-      bundled: "../dnas/how/workdir/how.dna"
+      path: "../dnas/how/workdir/how.dna"
       modifiers:
         network_seed: ~
         properties: ~
-        origin_time: ~
+        quantum_time: ~
       version: ~
       clone_limit: 0

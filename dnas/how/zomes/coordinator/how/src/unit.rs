@@ -7,7 +7,7 @@ use how_integrity::{Unit, EntryTypes, LinkTypes};
 use crate::document::{update_document, UpdateDocumentInput, _update_document};
 use crate::error::*;
 //use crate::signals::*;
-use crate::tree::{UnitInfo, _get_tree, tree_path, _get_path_tree, tree_path_to_str, PathContent, Node};
+use crate::tree::{UnitInfo, tree_path, _get_path_tree, PathContent, Node};
 use crate::utils::do_get_links;
 
 pub fn get_units_path() -> Path {
@@ -40,6 +40,7 @@ pub fn delete_unit_links(hash: EntryHash, tree_paths: Vec<Path>)  -> ExternResul
             delete_link_input.push(DeleteLinkInput{
                 address: l.create_link_hash,
                 chain_top_ordering: ChainTopOrdering::Relaxed,
+                get_options: GetOptions::default(),
             });
         }
     }
@@ -50,6 +51,7 @@ pub fn delete_unit_links(hash: EntryHash, tree_paths: Vec<Path>)  -> ExternResul
                 delete_link_input.push(DeleteLinkInput{
                     address: l.create_link_hash,
                     chain_top_ordering: ChainTopOrdering::Relaxed,
+                    get_options: GetOptions::default(),
                 });
             }
         }
@@ -311,6 +313,7 @@ pub fn reparent_document(old_unit_hash: EntryHash,  new_unit_hash: EntryHash, ne
                 delete_link_input.push(DeleteLinkInput{
                     address: l.create_link_hash,
                     chain_top_ordering: ChainTopOrdering::Relaxed,
+                    get_options: GetOptions::default(),
                 });
             }
         }

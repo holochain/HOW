@@ -11,10 +11,6 @@ export const appletServices: AppletServices = {
     creatables: {
 
     },
-    bindAsset: async (appletClient: AppClient,
-        srcWal: WAL, dstWal: WAL): Promise<void> => {
-        console.log("Bind requested.  Src:", srcWal, "  Dst:", dstWal)
-      },
     // Types of UI widgets/blocks that this Applet supports
     blockTypes: {
     },

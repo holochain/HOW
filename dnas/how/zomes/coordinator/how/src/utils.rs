@@ -45,6 +45,6 @@ ScopedLinkType: TryFrom<T, Error = E>,
 }
 
 pub fn do_get_links(base: impl Into<AnyLinkableHash>, link_type: impl LinkTypeFilterExt) -> ExternResult<Vec<Link>> {
-    let input = GetLinksInputBuilder::try_new(base, link_type)?.build();
-    get_links(input)
+    let query = LinkQuery::new(base, link_type.try_into_filter()?);
+    get_links(query, GetStrategy::Network)
 }
